@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    
       <div className="footer-menu">
         <div className="footer-logo">
           <img
@@ -74,7 +74,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </footer>
+    
   );
 };
 

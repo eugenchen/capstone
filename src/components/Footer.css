@@ -1,4 +1,7 @@
-footer {
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   height: 200px;
   background-color: #495e57;
   color: #ffffff;
@@ -14,24 +17,24 @@ footer {
   padding: 25px;
 }
 
-.footer-menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
 .footer-header {
   margin: 20px 20px 20px 0px;
 }
+
 #footer-nav {
   list-style: none;
+  margin-left: 100px;
 }
 
 #footer-info {
   padding: 0;
   list-style: none;
+  margin-left: 100px;
 }
 
 #footer-links {
   list-style: none;
+  margin-left: 100px;
 }
 
 .footer-nav-item a:link,
@@ -42,6 +45,7 @@ footer {
   font-family: "Karla", "Sans Serif";
   text-decoration: none;
 }
+
 .footer-nav-item a:visited,
 .footer-link-item a:visited {
   color: white;

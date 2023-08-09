@@ -1,6 +1,6 @@
 import React from "react";
 import heroImg from "../assets/hero-img.jpg";
-import './Main.css'
+import "./Main.css";
 
 const Main = () => {
   return (
@@ -17,9 +17,11 @@ const Main = () => {
           <img src={heroImg} alt="bruscetta" width="300" height="300" />
         </div>
       </div>
-      <div>Highlights</div>
-      <div>Testimonials</div>
-      <article>About</article>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </main>
   );
 };
