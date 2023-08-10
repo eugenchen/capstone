@@ -1,0 +1,8 @@
+.reservation-form {
+  padding: 2rem 0 0.5rem 0;
+  text-align: center;
+}
+
+.reservation-form > div {
+  margin-bottom: 1.5rem;
+}
