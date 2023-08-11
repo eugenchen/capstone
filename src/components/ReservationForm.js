@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 export default function ReservationForm(props) {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
@@ -10,6 +9,21 @@ export default function ReservationForm(props) {
   const [occasion, setOccasion] = useState("");
   const [preferences, setPreferences] = useState("");
   const [comments, setComments] = useState("");
+
+  const [finalTime, setFinalTime] = useState(
+    props.availableTimes.map((times) => <option>{times}</option>)
+  );
+
+  function handleDateChange(e) {
+    setDate(e.target.value);
+
+    var stringify = e.target.value;
+    const date = new Date(stringify);
+
+    props.updateTimes(date);
+
+    setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
+  }
 
   return (
     <form className="reservation-form">
@@ -89,19 +103,14 @@ export default function ReservationForm(props) {
           id="date"
           required
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={handleDateChange}
         ></input>
       </div>
 
       <div>
         <label htmlFor="time">Select Time</label> <br></br>
         <select id="time" required>
-          <option>17:00</option>
-          <option>18:00</option>
-          <option>19:00</option>
-          <option>20:00</option>
-          <option>21:00</option>
-          <option>22:00</option>
+          {finalTime}
         </select>
       </div>
 
@@ -147,16 +156,13 @@ export default function ReservationForm(props) {
       </div>
 
       <div>
-        <br></br>
         <small>
           <p>
             Note: You cannot edit your reservation after submission. Please
             double-check your answer before submitting your reservation request.
           </p>
         </small>
-        <Link className="action-button" to="/confirmation">
-          Book Table
-        </Link>
+        <button>Reserve Now</button>
       </div>
     </form>
   );

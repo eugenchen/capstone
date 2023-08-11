@@ -32,7 +32,7 @@
 
 .main-menu-item a {
   color: black;
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   text-decoration: none;
   padding: 10px;
   margin: 10px;

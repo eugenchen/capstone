@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import heroImg from "../assets/hero-img.jpg";
 import "./Main.css";
 
@@ -13,7 +14,9 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes saved with a modern twist.
           </p>
-          <button>Reserve a table!</button>
+          <Link to="/Reservations">
+            <button>Reserve a table!</button>
+          </Link>
           <img src={heroImg} alt="bruscetta" width="300" height="300" />
         </div>
       </div>

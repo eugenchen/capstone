@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import Footer from "./components/Footer";
-import "./App.css";
 import AboutPage from "./components/AboutPage";
 import Reservations from "./components/Reservations";
+import "./App.css";
 
 const App = () => {
   return (
